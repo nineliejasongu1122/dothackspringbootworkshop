@@ -30,7 +30,8 @@ public class MainController {
 
     @PostMapping(path = "/student/add")
     public ResponseEntity<?> addStudent(@RequestBody String name) {
-        Student s = new Student(name);
+        Student s = new Student();
+        s.setSname(name);
         return ResponseEntity.ok(studentRepository.save(s));
     }
 
@@ -41,7 +42,8 @@ public class MainController {
 
     @PostMapping(path = "/course/add")
     public ResponseEntity<?> addCorse(@RequestBody String cname) {
-        Course s = new Course(cname);
+        Course s = new Course();
+        s.setCname(cname);
         return ResponseEntity.ok(courseRepository.save(s));
     }
 
@@ -52,6 +54,9 @@ public class MainController {
 
     @PostMapping(path = "/registration/map")
     public ResponseEntity<?> register(@RequestBody MappingDTO mDTO) {
+        //duplication checking
+        // -> looping to check (not recommended)
+        // -> using query
         Registration r = new Registration();
         r.setCourse(courseRepository.findById(mDTO.getCid()).get());
         r.setStudent(studentRepository.findById(mDTO.getSid()).get());
@@ -59,10 +64,13 @@ public class MainController {
         return ResponseEntity.ok(rRepository.save(r));
     }
 
-
     @GetMapping(path = "/registration/listbycourse/{name}")
-    public ResponseEntity listByCourseName (@PathVariable String name){
-        return null;
+    public ResponseEntity listByCourseName(@PathVariable String name) {
+        return ResponseEntity.ok(rRepository.findAllStudentByCourseName(name));
     }
 
+    @GetMapping(path = "/registration/listbystudent/{name}")
+    public ResponseEntity listByStudentName(@PathVariable String name) {
+        return ResponseEntity.ok(rRepository.findAllCourseByStudentName(name));
+    }
 }

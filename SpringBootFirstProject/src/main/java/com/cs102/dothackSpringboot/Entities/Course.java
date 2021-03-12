@@ -15,10 +15,18 @@ public class Course {
 
     private String cname;
 
-    public Course(String cname) {
+    @OneToMany(mappedBy = "course") //Same as the naming in Regisration table
+    private Set<Registration> registrations;
+
+    public void setCname(String cname) {
         this.cname = cname;
     }
 
-    @OneToMany(mappedBy = "course") //Same as the naming in Regisration table
-    private Set<Registration> registrations;
+    public Integer getCid() {
+        return cid;
+    }
+
+    public String getCname() {
+        return cname;
+    }
 }

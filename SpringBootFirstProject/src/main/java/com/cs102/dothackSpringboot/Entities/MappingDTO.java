@@ -3,7 +3,9 @@ package com.cs102.dothackSpringboot.Entities;
 public class MappingDTO {
 
     private Integer cid;
+
     private Integer sid;
+
     private String semester;
 
     public String getSemester() {

@@ -17,8 +17,16 @@ public class Student {
     @OneToMany(mappedBy = "student") //Same as the naming in Regisration table
     private Set<Registration> registration;
 
-    public Student(String sname) {
+    public void setSname(String sname) {
         this.sname = sname;
+    }
+
+    public Integer getSid() {
+        return sid;
+    }
+
+    public String getSname() {
+        return sname;
     }
 }
 
