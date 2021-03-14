@@ -27,13 +27,13 @@ public class MainController {
 
 
     @GetMapping(path = "/get/test4")
-    public String getWithDefaultParam(@RequestParam(defaultValue = "I always love java") String dt) {
+    public String getWithDefaultParam(@RequestParam(defaultValue = "2021-03-01") String dt) {
         //Implement a rest api
         RestTemplate restTemplate = new RestTemplate();
         String link = "https://api.data.gov.sg/v1/environment/air-temperature?date=%s";
         link = String.format(link, dt);
         ResponseEntity<String> response = restTemplate
                 .getForEntity(link, String.class);
-        return "The Text is: " + response;
+        return response.getBody();
     }
 }
