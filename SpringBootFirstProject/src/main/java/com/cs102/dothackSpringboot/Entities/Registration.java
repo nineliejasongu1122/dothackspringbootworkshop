@@ -2,6 +2,7 @@ package com.cs102.dothackSpringboot.Entities;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "dothack_registration")
@@ -43,5 +44,23 @@ public class Registration {
 
     public String getSemester() {
         return semester;
+    }
+
+    private Date CreateAt;
+
+    private Date UpdateAt = null;
+
+    @PrePersist
+    public void logTime() {
+        Date temp = new Date();
+        Object param = new java.sql.Timestamp(temp.getTime());
+        CreateAt = (Date) param;
+    }
+
+    @PreUpdate
+    public void logUpdate() {
+        Date temp = new Date();
+        Object param = new java.sql.Timestamp(temp.getTime());
+        UpdateAt = (Date) param;
     }
 }

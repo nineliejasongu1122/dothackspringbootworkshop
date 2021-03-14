@@ -3,6 +3,7 @@ package com.cs102.dothackSpringboot.Entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -27,6 +28,24 @@ public class Student {
 
     public String getSname() {
         return sname;
+    }
+
+    private Date CreateAt;
+
+    private Date UpdateAt = null;
+
+    @PrePersist
+    public void logTime() {
+        Date temp = new Date();
+        Object param = new java.sql.Timestamp(temp.getTime());
+        CreateAt = (Date) param;
+    }
+
+    @PreUpdate
+    public void logUpdate() {
+        Date temp = new Date();
+        Object param = new java.sql.Timestamp(temp.getTime());
+        UpdateAt = (Date) param;
     }
 }
 
