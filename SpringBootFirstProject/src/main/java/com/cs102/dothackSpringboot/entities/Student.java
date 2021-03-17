@@ -1,8 +1,7 @@
-package com.cs102.dothackSpringboot.Entities;
+package com.cs102.dothackSpringboot.entities;
 
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
 

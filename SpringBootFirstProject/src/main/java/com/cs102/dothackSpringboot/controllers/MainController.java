@@ -1,13 +1,13 @@
-package com.cs102.dothackSpringboot.Controllers;
+package com.cs102.dothackSpringboot.controllers;
 
 
-import com.cs102.dothackSpringboot.Entities.Course;
-import com.cs102.dothackSpringboot.Entities.MappingDTO;
-import com.cs102.dothackSpringboot.Entities.Registration;
-import com.cs102.dothackSpringboot.Entities.Student;
-import com.cs102.dothackSpringboot.Repository.CourseRepository;
-import com.cs102.dothackSpringboot.Repository.RegistrationRepository;
-import com.cs102.dothackSpringboot.Repository.StudentRepository;
+import com.cs102.dothackSpringboot.entities.Course;
+import com.cs102.dothackSpringboot.entities.MappingDTO;
+import com.cs102.dothackSpringboot.entities.Registration;
+import com.cs102.dothackSpringboot.entities.Student;
+import com.cs102.dothackSpringboot.repository.CourseRepository;
+import com.cs102.dothackSpringboot.repository.RegistrationRepository;
+import com.cs102.dothackSpringboot.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
