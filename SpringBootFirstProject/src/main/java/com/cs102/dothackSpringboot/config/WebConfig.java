@@ -1,4 +1,4 @@
-package com.cs102.dothackSpringboot.Config;
+package com.cs102.dothackSpringboot.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
