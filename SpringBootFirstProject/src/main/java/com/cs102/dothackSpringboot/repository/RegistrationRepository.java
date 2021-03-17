@@ -1,8 +1,8 @@
-package com.cs102.dothackSpringboot.Repository;
+package com.cs102.dothackSpringboot.repository;
 
-import com.cs102.dothackSpringboot.Entities.Course;
-import com.cs102.dothackSpringboot.Entities.Registration;
-import com.cs102.dothackSpringboot.Entities.Student;
+import com.cs102.dothackSpringboot.entities.Course;
+import com.cs102.dothackSpringboot.entities.Registration;
+import com.cs102.dothackSpringboot.entities.Student;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.scheduling.annotation.Async;

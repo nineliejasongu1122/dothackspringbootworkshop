@@ -1,4 +1,4 @@
-package com.cs102.dothackSpringboot.Entities;
+package com.cs102.dothackSpringboot.entities;
 
 public class MappingDTO {
 
