@@ -1,4 +1,4 @@
-# Welcome to Spring Boot Workshop
+# Welcome to .hack Spring Boot Workshop
 
 ## Branches
 In this repository, you will see different branches with different naming. You may need to choose the particular branch to refer to the source code given or you can fork this project to your own github. Each branch has its own implementation. I will update them in the future if needed:)
