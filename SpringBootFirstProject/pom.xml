@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cs102</groupId>
 	<artifactId>dothackSpringboot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>dothackSpringboot</name>
 	<description>Demo for .hack spring boot workshop</description>
 	<properties>
