@@ -15,6 +15,8 @@ Here are all the branches:
 --- Implemented based on JPAImplementation. 2 more attributes for each entity class with Entity LifeCycle enabled.
 - schedule email
 --- Implemented based on SimpleGetMethods. With email-sender utility and schedule method example.
+- Exception Handling
+--- Implemented based on JPAImplementation with exception handled (catch NoSuchElementException and throw ResponseStatusException) for map method.
 
 ## How to works with Spring boot
 ### Load maven dependencies
