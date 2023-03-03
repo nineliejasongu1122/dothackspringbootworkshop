@@ -10,4 +10,9 @@ public class MainController {
     public String test1() {
         return "Welcome to dot hack workshop";
     }
+    
+    @GetMapping(path = "demo/pray")
+    public String pray() {
+        return "Pray to President Jason Gu";
+    }
 }
