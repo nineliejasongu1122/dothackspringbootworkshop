@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
     @GetMapping(path = "demo/test1")
     public String test1() {
-        return "Welcome to dot hack workshop";
+        return "Pray to Jason Gu Yao Chen";
     }
 }
